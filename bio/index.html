@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clay McMillan - Biography</title>
+<meta name="description" content="Biographical information about the composer Clay McMillan.">
+<meta name="copyright" content="Clay McMillan">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<div class="outer">
+
+<div class="middle">
+
+<div id="container">
+
+    <div id="topleft">
+        <div class="line bottom"></div>
+        <div class="line right"></div>
+        <a class="back" href="../">&#8617;</a>
+    </div>
+
+    <div id="topright"></div>
+
+    <div id="lowerleft">
+        <div class="line right"></div>
+    </div>
+
+    <div id="lowermid">
+        <div class="line top"></div>
+        <div class="line right"></div>
+    </div>
+
+    <div id="uppermid">
+        <div class="line right"></div>
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+//randomize an array
+
+var pics = ["url('pic1.png')","url('pic2.png')","url('pic3.png')","url('pic4.png')","url('pic5.png')","url('pic6.png')","url('pic7.png')","url('pic8.png')","url('pic9.png')","url('pic10.png')","url('pic11.png')","url('pic12.png')","url('pic13.png')","url('pic14.png')","url('pic15.png')","url('pic16.png')","url('pic17.png')","url('pic18.png')","url('pic19.png')","url('pic20.png')","url('pic21.png')","url('pic22.png')","url('pic23.png')","url('pic24.png')","url('pic25.png')","url('pic26.png')","url('pic27.png')","url('pic28.png')","url('pic29.png')","url('pic30.png')","url('pic31.png')","url('pic32.png')","url('pic33.png')","url('pic34.png')","url('pic35.png')","url('pic36.png')","url('pic37.png')","url('pic38.png')","url('pic39.png')","url('pic40.png')","url('pic41.png')","url('pic42.png')","url('pic43.png')","url('pic44.png')","url('pic45.png')","url('pic46.png')","url('pic47.png')","url('pic48.png')","url('pic49.png')","url('pic50.png')","url('pic51.png')","url('pic52.png')","url('pic53.png')","url('pic54.png')","url('pic55.png')","url('pic56.png')","url('pic57.png')","url('pic58.png')","url('pic59.png')","url('pic60.png')","url('pic61.png')","url('pic62.png')","url('pic63.png')","url('pic64.png')","url('pic65.png')","url('pic66.png')","url('pic67.png')","url('pic68.png')","url('pic69.png')","url('pic70.png')","url('pic71.png')","url('pic72.png')","url('pic73.png')","url('pic74.png')","url('pic75.png')","url('pic76.png')","url('pic77.png')","url('pic78.png')","url('pic79.png')","url('pic80.png')","url('pic81.png')","url('pic82.png')","url('pic83.png')","url('pic84.png')","url('pic85.png')","url('pic86.png')","url('pic87.png')","url('pic88.png')","url('pic89.png')","url('pic90.png')","url('pic91.png')","url('pic92.png')","url('pic93.png')","url('pic94.png')","url('pic95.png')","url('pic96.png')","url('pic97.png')","url('pic98.png')","url('pic99.png')","url('pic100.png')","url('pic101.png')","url('pic102.png')","url('pic103.png')","url('pic104.png')","url('pic105.png')","url('pic106.png')","url('pic107.png')","url('pic108.png')","url('pic109.png')","url('pic110.png')","url('pic111.png')","url('pic112.png')","url('pic113.png')","url('pic114.png')","url('pic115.png')","url('pic116.png')","url('pic117.png')","url('pic118.png')","url('pic119.png')","url('pic120.png')","url('pic121.png')","url('pic122.png')","url('pic123.png')","url('pic124.png')","url('pic125.png')","url('pic126.png')","url('pic127.png')","url('pic128.png')","url('pic129.png')","url('pic130.png')","url('pic131.png')","url('pic132.png')","url('pic133.png')","url('pic134.png')","url('pic135.png')","url('pic136.png')","url('pic138.png')","url('pic139.png')","url('pic140.png')","url('pic141.png')","url('pic142.png')","url('pic143.png')","url('pic144.png')","url('pic145.png')","url('pic146.png')","url('pic147.png')","url('pic148.png')","url('pic149.png')","url('pic150.png')","url('pic151.png')","url('pic152.png')","url('pic153.png')"];
+
+var picsRandom = [];
+
+var images = ["pic1.png","pic2.png","pic3.png","pic4.png","pic5.png","pic6.png","pic7.png","pic8.png","pic9.png","pic10.png","pic11.png","pic12.png","pic13.png","pic14.png","pic15.png","pic16.png","pic17.png","pic18.png","pic19.png","pic20.png","pic21.png","pic22.png","pic23.png","pic24.png","pic25.png","pic26.png","pic27.png","pic28.png","pic29.png","pic30.png","pic31.png","pic32.png","pic33.png","pic34.png","pic35.png","pic36.png","pic37.png","pic38.png","pic39.png","pic40.png","pic41.png","pic42.png","pic43.png","pic44.png","pic45.png","pic46.png","pic47.png","pic48.png","pic49.png","pic50.png","pic51.png","pic52.png","pic53.png","pic54.png","pic55.png","pic56.png","pic57.png","pic58.png","pic59.png","pic60.png","pic61.png","pic62.png","pic63.png","pic64.png","pic65.png","pic66.png","pic67.png","pic68.png","pic69.png","pic70.png","pic71.png","pic72.png","pic73.png","pic74.png","pic75.png","pic76.png","pic77.png","pic78.png","pic79.png","pic80.png","pic81.png","pic82.png","pic83.png","pic84.png","pic85.png","pic86.png","pic87.png","pic88.png","pic89.png","pic90.png","pic91.png","pic92.png","pic93.png","pic94.png","pic95.png","pic96.png","pic97.png","pic98.png","pic99.png","pic100.png","pic101.png","pic102.png","pic103.png","pic104.png","pic105.png","pic106.png","pic107.png","pic108.png","pic109.png","pic110.png","pic111.png","pic112.png","pic113.png","pic114.png","pic115.png","pic116.png","pic117.png","pic118.png","pic119.png","pic120.png","pic121.png","pic122.png","pic123.png","pic124.png","pic125.png","pic126.png","pic127.png","pic128.png","pic129.png","pic130.png","pic131.png","pic132.png","pic133.png","pic134.png","pic135.png","pic136.png","pic138.png","pic139.png","pic140.png","pic141.png","pic142.png","pic143.png","pic144.png","pic145.png","pic146.png","pic147.png","pic148.png","pic149.png","pic150.png","pic151.png","pic152.png","pic153.png"];
+
+var imagesOrder = [];
+
+var n;
+
+while (pics.length > 0) {
+    n = Math.floor(Math.random() * pics.length);  // creates random number based on the length of the pics array
+    picsRandom[picsRandom.length] = pics[n];  // Adds a new randomly selected element from pics to picsRandom
+    imagesOrder[imagesOrder.length] = images[n];
+    pics.splice(n, 1);  // Removes the randomly selected element from pics, changing the length of the pics array
+    images.splice(n,1);
+}
+
+document.getElementById("topleft").style.backgroundImage=picsRandom[0];
+document.getElementById("topright").style.backgroundImage=picsRandom[1];
+document.getElementById("lowerleft").style.backgroundImage=picsRandom[2];
+document.getElementById("lowermid").style.backgroundImage=picsRandom[3];
+document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
+
+
+var arrayLoc = 5; // current location of the picsRandom array
+var imageObj = new Image();
+imageObj.src = imagesOrder[arrayLoc];
+setTimeout("picReplace()", 4000);
+
+function picReplace() {
+
+    var window = Math.floor(Math.random() * 5); //which background will be replaced
+    switch(window) {
+        case 0:
+            document.getElementById("topleft").style.backgroundImage=picsRandom[arrayLoc];
+            break;
+        case 1:
+            document.getElementById("topright").style.backgroundImage=picsRandom[arrayLoc];
+            break;
+        case 2:
+            document.getElementById("lowerleft").style.backgroundImage=picsRandom[arrayLoc];
+            break;
+        case 3:
+            document.getElementById("lowermid").style.backgroundImage=picsRandom[arrayLoc];
+            break;
+        case 4:
+            document.getElementById("uppermid").style.backgroundImage=picsRandom[arrayLoc];
+            break;
+        }
+
+    if (arrayLoc < picsRandom.length) {
+        arrayLoc = arrayLoc + 1;
+    } else {
+        arrayLoc = 0;
+    }
+    imageObj.src = imagesOrder[arrayLoc];
+    wait();
+}
+
+function wait() {
+    var timeRandom = Math.floor(Math.random() * 3);
+    switch(timeRandom) {
+        case 0:
+            setTimeout("picReplace()", 200);
+            break;
+        case 1:
+            setTimeout("picReplace()", 1000);
+            break;
+        case 2:
+            setTimeout("picReplace()", 2000);
+            break;
+    }
+}
+</script>
+
+</body>
+
+</html>
