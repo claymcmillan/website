@@ -75,11 +75,10 @@ document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
 var arrayLoc = 5; // current location of the picsRandom array
 var imageObj = new Image();
 imageObj.src = imagesOrder[arrayLoc];
-var force = 1
 setTimeout("picReplace()", 4000);
 
 function picReplace() {
-
+    var force = 1
     var window = Math.floor(Math.random() * 5); //which background will be replaced
     switch(window) {
         case 0:
