@@ -64,30 +64,17 @@ while (pics.length > 0) {
     pics.splice(n, 1);  // Removes the randomly selected element from pics, changing the length of the pics array
     images.splice(n,1);
 }
-var imageObj = new Image();
-imageObj.src = imagesOrder[0];
-imageObj.src = imagesOrder[1];
-imageObj.src = imagesOrder[2];
-imageObj.src = imagesOrder[3];
-imageObj.src = imagesOrder[4];
-setTimeout("preload()", 1500);
 
-function preload() {
-    document.getElementById("topleft").style.backgroundImage=picsRandom[0];
-    document.getElementById("topright").style.backgroundImage=picsRandom[1];
-    document.getElementById("lowerleft").style.backgroundImage=picsRandom[2];
-    document.getElementById("lowermid").style.backgroundImage=picsRandom[3];
-    document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
-    }
+document.getElementById("topleft").style.backgroundImage=picsRandom[0];
+document.getElementById("topright").style.backgroundImage=picsRandom[1];
+document.getElementById("lowerleft").style.backgroundImage=picsRandom[2];
+document.getElementById("lowermid").style.backgroundImage=picsRandom[3];
+document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
+
 
 var arrayLoc = 5; // current location of the picsRandom array
-var locTwo = arrayLoc + 1;
-var locThree = arrayLoc + 2;
-var locFour = arrayLoc + 3;
+var imageObj = new Image();
 imageObj.src = imagesOrder[arrayLoc];
-imageObj.src = imagesOrder[locTwo];
-imageObj.src = imagesOrder[locThree];
-imageObj.src = imagesOrder[locFour];
 setTimeout("picReplace()", 4000);
 
 function picReplace() {
@@ -116,7 +103,6 @@ function picReplace() {
     } else {
         arrayLoc = 0;
     }
-    locTwo = arrayLoc + 1;
     imageObj.src = imagesOrder[arrayLoc];
     wait();
 }
@@ -128,11 +114,9 @@ function wait() {
             setTimeout("picReplace()", 200);
             break;
         case 1:
-            imageObj.src = imagesOrder[locTwo];
             setTimeout("picReplace()", 1000);
             break;
         case 2:
-            imageObj.src = imagesOrder[locTwo];
             setTimeout("picReplace()", 2000);
             break;
     }
