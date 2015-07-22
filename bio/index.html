@@ -78,7 +78,7 @@ imageObj.src = imagesOrder[arrayLoc];
 setTimeout("picReplace()", 4000);
 
 function picReplace() {
-    var force = 1
+
     var window = Math.floor(Math.random() * 5); //which background will be replaced
     switch(window) {
         case 0:
@@ -98,10 +98,6 @@ function picReplace() {
             break;
         }
 
-    if (arrayLoc = 4) {
-        force = 0;
-    }
-
     if (arrayLoc < picsRandom.length) {
         arrayLoc = arrayLoc + 1;
     } else {
@@ -113,17 +109,17 @@ function picReplace() {
 
 function wait() {
     var timeRandom = Math.floor(Math.random() * 3);
-    if (force = 1) {
-        timeRandom = 2;
-    }
     switch(timeRandom) {
         case 0:
+            imageObj.src = imagesOrder[arrayLoc + 1];
             setTimeout("picReplace()", 200);
             break;
         case 1:
+            imageObj.src = imagesOrder[arrayLoc + 1];
             setTimeout("picReplace()", 1000);
             break;
         case 2:
+            imageObj.src = imagesOrder[arrayLoc + 1];
             setTimeout("picReplace()", 2000);
             break;
     }
