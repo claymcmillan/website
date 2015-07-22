@@ -54,8 +54,8 @@ var picsRandom = [];
 var images = ["pic1.png","pic2.png","pic3.png","pic4.png","pic5.png","pic6.png","pic7.png","pic8.png","pic9.png","pic10.png","pic11.png","pic12.png","pic13.png","pic14.png","pic15.png","pic16.png","pic17.png","pic18.png","pic19.png","pic20.png","pic21.png","pic22.png","pic23.png","pic24.png","pic25.png","pic26.png","pic27.png","pic28.png","pic29.png","pic30.png","pic31.png","pic32.png","pic33.png","pic34.png","pic35.png","pic36.png","pic37.png","pic38.png","pic39.png","pic40.png","pic41.png","pic42.png","pic43.png","pic44.png","pic45.png","pic46.png","pic47.png","pic48.png","pic49.png","pic50.png","pic51.png","pic52.png","pic53.png","pic54.png","pic55.png","pic56.png","pic57.png","pic58.png","pic59.png","pic60.png","pic61.png","pic62.png","pic63.png","pic64.png","pic65.png","pic66.png","pic67.png","pic68.png","pic69.png","pic70.png","pic71.png","pic72.png","pic73.png","pic74.png","pic75.png","pic76.png","pic77.png","pic78.png","pic79.png","pic80.png","pic81.png","pic82.png","pic83.png","pic84.png","pic85.png","pic86.png","pic87.png","pic88.png","pic89.png","pic90.png","pic91.png","pic92.png","pic93.png","pic94.png","pic95.png","pic96.png","pic97.png","pic98.png","pic99.png","pic100.png","pic101.png","pic102.png","pic103.png","pic104.png","pic105.png","pic106.png","pic107.png","pic108.png","pic109.png","pic110.png","pic111.png","pic112.png","pic113.png","pic114.png","pic115.png","pic116.png","pic117.png","pic118.png","pic119.png","pic120.png","pic121.png","pic122.png","pic123.png","pic124.png","pic125.png","pic126.png","pic127.png","pic128.png","pic129.png","pic130.png","pic131.png","pic132.png","pic133.png","pic134.png","pic135.png","pic136.png","pic138.png","pic139.png","pic140.png","pic141.png","pic142.png","pic143.png","pic144.png","pic145.png","pic146.png","pic147.png","pic148.png","pic149.png","pic150.png","pic151.png","pic152.png","pic153.png"];
 
 var imagesOrder = [];
+
 var n;
-var imageObj = new Image();
 
 while (pics.length > 0) {
     n = Math.floor(Math.random() * pics.length);  // creates random number based on the length of the pics array
@@ -71,17 +71,10 @@ document.getElementById("lowerleft").style.backgroundImage=picsRandom[2];
 document.getElementById("lowermid").style.backgroundImage=picsRandom[3];
 document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
 
-preloader();
-
-function preloader() {
-    var i = 0
-    for (i=0; i < 152; i++) {
-        imageObj.src = imagesOrder[i];
-        }
-    }
 
 var arrayLoc = 5; // current location of the picsRandom array
-
+var imageObj = new Image();
+imageObj.src = imagesOrder[arrayLoc];
 setTimeout("picReplace()", 4000);
 
 function picReplace() {
@@ -124,6 +117,9 @@ function wait() {
             setTimeout("picReplace()", 1000);
             break;
         case 2:
+            imageObj.src = imagesOrder[arrayLoc];
+            imageObj.src = imagesOrder[arrayLoc+1];
+            imageObj.src = imagesOrder[arrayLoc+2];
             setTimeout("picReplace()", 2000);
             break;
     }
