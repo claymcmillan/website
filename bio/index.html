@@ -65,17 +65,32 @@ while (pics.length > 0) {
     images.splice(n,1);
 }
 
-document.getElementById("topleft").style.backgroundImage=picsRandom[0];
-document.getElementById("topright").style.backgroundImage=picsRandom[1];
-document.getElementById("lowerleft").style.backgroundImage=picsRandom[2];
-document.getElementById("lowermid").style.backgroundImage=picsRandom[3];
-document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
+var imageObj = new Image();
+imageObj.src = imagesOrder[0];
+imageObj.src = imagesOrder[1];
+imageObj.src = imagesOrder[2];
+imageObj.src = imagesOrder[3];
+imageObj.src = imagesOrder[4];
 
+setTimeout ("firstLoad()", 2000);
+
+function firstLoad() {
+    document.getElementById("topleft").style.backgroundImage=picsRandom[0];
+    document.getElementById("topright").style.backgroundImage=picsRandom[1];
+    document.getElementById("lowerleft").style.backgroundImage=picsRandom[2];
+    document.getElementById("lowermid").style.backgroundImage=picsRandom[3];
+    document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
+    }
 
 var arrayLoc = 5; // current location of the picsRandom array
-var imageObj = new Image();
+
 imageObj.src = imagesOrder[arrayLoc];
+imageObj.src = imagesOrder[arrayLoc+1];
+imageObj.src = imagesOrder[arrayLoc+2];
+imageObj.src = imagesOrder[arrayLoc+3];
+imageObj.src = imagesOrder[arrayLoc+4];
 setTimeout("picReplace()", 4000);
+
 
 function picReplace() {
 
@@ -117,6 +132,11 @@ function wait() {
             setTimeout("picReplace()", 1000);
             break;
         case 2:
+            imageObj.src = imagesOrder[arrayLoc];
+            imageObj.src = imagesOrder[arrayLoc+1];
+            imageObj.src = imagesOrder[arrayLoc+2];
+            imageObj.src = imagesOrder[arrayLoc+3];
+            imageObj.src = imagesOrder[arrayLoc+4];
             setTimeout("picReplace()", 2000);
             break;
     }
