@@ -75,6 +75,7 @@ document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
 var arrayLoc = 5; // current location of the picsRandom array
 var imageObj = new Image();
 imageObj.src = imagesOrder[arrayLoc];
+var force = 1
 setTimeout("picReplace()", 4000);
 
 function picReplace() {
@@ -98,6 +99,10 @@ function picReplace() {
             break;
         }
 
+    if (arrayLoc == 4) {
+        force = 0;
+    }
+
     if (arrayLoc < picsRandom.length) {
         arrayLoc = arrayLoc + 1;
     } else {
@@ -109,6 +114,9 @@ function picReplace() {
 
 function wait() {
     var timeRandom = Math.floor(Math.random() * 3);
+    if (force = 1) {
+        timeRandom = 2
+    }
     switch(timeRandom) {
         case 0:
             setTimeout("picReplace()", 200);
@@ -117,9 +125,6 @@ function wait() {
             setTimeout("picReplace()", 1000);
             break;
         case 2:
-            imageObj.src = imagesOrder[arrayLoc];
-            imageObj.src = imagesOrder[arrayLoc+1];
-            imageObj.src = imagesOrder[arrayLoc+2];
             setTimeout("picReplace()", 2000);
             break;
     }
