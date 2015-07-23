@@ -75,7 +75,7 @@ document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
 var arrayLoc = 5; // current location of the picsRandom array
 var imageObj = new Image();
 imageObj.src = imagesOrder[arrayLoc];
-setTimeout("picReplace()", 4000);
+imageObj.onload = function() {picReplace();};
 
 function picReplace() {
 
@@ -104,7 +104,7 @@ function picReplace() {
         arrayLoc = 0;
     }
     imageObj.src = imagesOrder[arrayLoc];
-    wait();
+    imageObj.onload = function() {wait();};
 }
 
 function wait() {
