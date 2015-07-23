@@ -65,17 +65,49 @@ while (pics.length > 0) {
     images.splice(n,1);
 }
 
-document.getElementById("topleft").style.backgroundImage=picsRandom[0];
-document.getElementById("topright").style.backgroundImage=picsRandom[1];
-document.getElementById("lowerleft").style.backgroundImage=picsRandom[2];
-document.getElementById("lowermid").style.backgroundImage=picsRandom[3];
-document.getElementById("uppermid").style.backgroundImage=picsRandom[4];
-
-
-var arrayLoc = 5; // current location of the picsRandom array
+var arrayLoc = 0;
 var imageObj = new Image();
 imageObj.src = imagesOrder[arrayLoc];
-imageObj.onload = function() {picReplace();};
+imageObj.onload = function() {firstPic();};
+
+function firstPic() {
+    document.getElementById("uppermid").style.backgroundImage=picsRandom[arrayLoc];
+    arrayLoc = arrayLoc + 1;
+    imageObj.src = imagesOrder[arrayLoc];
+    imageObj.onload = function() {secondPic();};
+}
+
+function secondPic() {
+    document.getElementById("lowermid").style.backgroundImage=picsRandom[arrayLoc];
+    arrayLoc = arrayLoc + 1;
+    imageObj.src = imagesOrder[arrayLoc];
+    imageObj.onload = function() {thirdPic();};
+}
+
+function thirdPic() {
+    document.getElementById("lowerleft").style.backgroundImage=picsRandom[arrayLoc];
+    arrayLoc = arrayLoc + 1;
+    imageObj.src = imagesOrder[arrayLoc];
+    imageObj.onload = function() {fourthPic();};
+}
+
+function fourthPic() {
+    document.getElementById("topleft").style.backgroundImage=picsRandom[arrayLoc];
+    arrayLoc = arrayLoc + 1;
+    imageObj.src = imagesOrder[arrayLoc];
+    imageObj.onload = function() {fifthPic();};
+}
+
+function fifthPic() {
+    document.getElementById("topright").style.backgroundImage=picsRandom[arrayLoc];
+    arrayLoc = arrayLoc + 1;
+    imageObj.src = imagesOrder[arrayLoc];
+    imageObj.onload = function() {pause();};
+}
+
+function pause() {
+    setTimeout("picReplace()", 4000);
+}
 
 function picReplace() {
 
@@ -98,7 +130,7 @@ function picReplace() {
             break;
         }
 
-    if (arrayLoc < picsRandom.length) {
+    if (arrayLoc < (picsRandom.length - 1)) {
         arrayLoc = arrayLoc + 1;
     } else {
         arrayLoc = 0;
@@ -111,7 +143,7 @@ function wait() {
     var timeRandom = Math.floor(Math.random() * 3);
     switch(timeRandom) {
         case 0:
-            setTimeout("picReplace()", 1200);
+            setTimeout("picReplace()", 200);
             break;
         case 1:
             setTimeout("picReplace()", 1000);
@@ -121,6 +153,7 @@ function wait() {
             break;
     }
 }
+
 </script>
 
 </body>
